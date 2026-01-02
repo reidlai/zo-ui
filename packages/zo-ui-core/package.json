@@ -1,0 +1,20 @@
+{
+  "name": "@zo-ui/core",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "description": "Core logic for zo-ui scaffold generator",
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.27",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "zod": "^3.25.76"
+  },
+  "dependencies": {
+    "jiti": "^2.6.1",
+    "zod-to-json-schema": "^3.25.1"
+  }
+}

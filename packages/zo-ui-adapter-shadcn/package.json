@@ -1,0 +1,18 @@
+{
+    "name": "@zo-ui/adapter-shadcn",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "description": "ShadCN adapter for zo-ui",
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@zo-ui/core": "workspace:*",
+        "sveltekit-superforms": "^2.29.1",
+        "zod": "^3.25.76"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.27",
+        "typescript": "^5.0.0"
+    }
+}

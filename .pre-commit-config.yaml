@@ -56,9 +56,9 @@ repos:
   # Stage 3: Code Quality (Local Hooks) & Stages 4, 5, 6
   - repo: local
     hooks:
-      - id: moon-lint
-        name: Moon Lint (TS/JS)
-        entry: npx @moonrepo/cli run :lint
+      - id: ts-lint
+        name: TS/JS Lint
+        entry: pnpm -r run lint
         language: system
         pass_filenames: false
         exclude: ^(\..*|CLAUDE\.md|GEMINI\.md|AGENTS\.md|pnpm-lock\.yaml|pnpm-workspace\.yaml|tsconfig\.base\.json|package\.json|package-lock\.json|moon\.yml|go\.work(\.sum)?)$
@@ -71,9 +71,9 @@ repos:
         pass_filenames: false
 
       # Stage 4: Unit Tests
-      - id: moon-test
-        name: Moon Unit Tests (All)
-        entry: npx @moonrepo/cli run :test
+      - id: unit-tests
+        name: Unit Tests (All)
+        entry: pnpm -r run test
         language: system
         pass_filenames: false
 

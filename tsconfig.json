@@ -1,0 +1,17 @@
+{
+    "files": [],
+    "references": [
+        {
+            "path": "./packages/zo-ui-core"
+        },
+        {
+            "path": "./packages/zo-ui-adapter-shadcn"
+        },
+        {
+            "path": "./packages/zo-ui-adapter-tailwind"
+        },
+        {
+            "path": "./packages/zo-ui-cli"
+        }
+    ]
+}

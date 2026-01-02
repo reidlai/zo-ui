@@ -1,0 +1,23 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "rootDir": "src",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext"
+    },
+    "include": [
+        "src"
+    ],
+    "references": [
+        {
+            "path": "../zo-ui-core"
+        },
+        {
+            "path": "../zo-ui-adapter-shadcn"
+        },
+        {
+            "path": "../zo-ui-adapter-tailwind"
+        }
+    ]
+}
