@@ -60,10 +60,10 @@ export const UserSchema = z.object({
 ```
 
 ### 2. Generate Components
-Run the generator directly using `npx` with your GitHub repository path (replace `username/zo-ui` with your actual repo path):
+Run the generator directly using `npx` with your GitHub repository path:
 
 ```bash
-npx github:username/zo-ui generate --schema ./schema.ts --adapter shadcn-svelte --output ./src/lib/components/user-form
+npx github:reidlai/zo-ui generate --schema ./schema.ts --adapter shadcn-svelte --output ./src/lib/components/user-form
 ```
 
 You'll get a fully functional `UserSchemaForm.svelte` ready to use!
@@ -81,5 +81,5 @@ Scaffolds UI components from a schema.
 Checks if a schema file is valid and readable by the parser.
 
 ```bash
-npx github:username/zo-ui validate ./schema.ts
+npx github:reidlai/zo-ui validate ./schema.ts
 ```
