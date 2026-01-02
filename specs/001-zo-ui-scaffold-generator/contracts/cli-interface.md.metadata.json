@@ -1,0 +1,5 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "CLI Interface contract defining commands, arguments, and flags for zo-ui.",
+  "updatedAt":  "2026-01-02T15:18:17.119297300Z"
+}
