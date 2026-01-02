@@ -1,0 +1,17 @@
+{
+    "name": "@zo-ui/types",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "description": "Shared type definitions for zo-ui adapters",
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "zod": "^3.25.76"
+    },
+    "peerDependencies": {
+        "zod": "^3.0.0"
+    }
+}

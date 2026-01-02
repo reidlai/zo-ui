@@ -2,7 +2,7 @@
     "name": "zo-ui-monorepo",
     "private": true,
     "bin": {
-        "zo-ui": "./packages/zo-ui-cli/bin/zo-ui.js"
+        "zo-ui": "./packages/zo-ui-cli/dist/index.js"
     },
     "scripts": {
         "test": "pnpm -r run test",

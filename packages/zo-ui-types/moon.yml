@@ -1,0 +1,9 @@
+type: "library"
+language: "typescript"
+
+tasks:
+  build:
+    command: "tsc"
+    outputs:
+      - "dist"
+    deps: []

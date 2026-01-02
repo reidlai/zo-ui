@@ -2,3 +2,8 @@ export * from './types';
 export * from './parser';
 export * from './loader';
 export * from './config';
+export * from './core/resolver/SchemaResolver';
+export * from './core/resolver/DefaultMapping';
+export * from './utils/FileWriter';
+export * from './core/config/ConfigLoader';
+export * from './core/plugin/PluginLoader';

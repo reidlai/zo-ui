@@ -2,6 +2,7 @@
 import { Command } from 'commander';
 import { generateCommand } from './commands/generate';
 import { validateCommand } from './commands/validate';
+import { docsCommand } from './commands/docs';
 
 const program = new Command();
 
@@ -12,5 +13,6 @@ program
 
 program.addCommand(generateCommand);
 program.addCommand(validateCommand);
+program.addCommand(docsCommand);
 
 program.parse();

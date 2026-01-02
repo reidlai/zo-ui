@@ -2,7 +2,7 @@
     "name": "@zo-ui/cli",
     "version": "0.0.1",
     "bin": {
-        "zo-ui": "./bin/zo-ui.js"
+        "zo-ui": "./dist/index.js"
     },
     "scripts": {
         "build": "tsc"
