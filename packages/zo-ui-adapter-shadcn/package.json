@@ -7,8 +7,8 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@zo-ui/core": "workspace:*",
-        "@zo-ui/types": "workspace:*",
+        "@zo-ui/core": "file:../zo-ui-core",
+        "@zo-ui/types": "file:../zo-ui-types",
         "sveltekit-superforms": "^2.29.1",
         "zod": "^3.25.76"
     },
