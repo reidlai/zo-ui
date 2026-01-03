@@ -7,7 +7,7 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@zo-ui/core": "workspace:*"
+        "@zo-ui/core": "file:../zo-ui-core"
     },
     "devDependencies": {
         "@types/node": "^20.19.27",
