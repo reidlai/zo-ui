@@ -7,6 +7,40 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@zo-ui/adapter-shadcn':
+        specifier: file:./packages/zo-ui-adapter-shadcn
+        version: file:packages/zo-ui-adapter-shadcn(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(typescript@5.9.3)
+      '@zo-ui/cli':
+        specifier: file:./packages/zo-ui-cli
+        version: link:packages/zo-ui-cli
+      '@zo-ui/core':
+        specifier: file:./packages/zo-ui-core
+        version: link:packages/zo-ui-core
+      '@zo-ui/types':
+        specifier: file:./packages/zo-ui-types
+        version: link:packages/zo-ui-types
+      chalk:
+        specifier: ^5.0.0
+        version: 5.6.2
+      commander:
+        specifier: ^11.0.0
+        version: 11.1.0
+      inquirer:
+        specifier: ^9.0.0
+        version: 9.3.8(@types/node@20.19.27)
+      jiti:
+        specifier: ^2.6.1
+        version: 2.6.1
+      ts-morph:
+        specifier: ^25.0.0
+        version: 25.0.1
+      zod:
+        specifier: ^3.25.76
+        version: 3.25.76
+      zod-to-json-schema:
+        specifier: ^3.25.1
+        version: 3.25.1(zod@3.25.76)
     devDependencies:
       prettier:
         specifier: ^3.0.0
@@ -21,10 +55,10 @@ importers:
   packages/zo-ui-adapter-shadcn:
     dependencies:
       '@zo-ui/core':
-        specifier: workspace:*
+        specifier: file:../zo-ui-core
         version: link:../zo-ui-core
       '@zo-ui/types':
-        specifier: workspace:*
+        specifier: file:../zo-ui-types
         version: link:../zo-ui-types
       sveltekit-superforms:
         specifier: ^2.29.1
@@ -56,13 +90,13 @@ importers:
   packages/zo-ui-cli:
     dependencies:
       '@zo-ui/adapter-shadcn':
-        specifier: workspace:*
-        version: link:../zo-ui-adapter-shadcn
+        specifier: file:../zo-ui-adapter-shadcn
+        version: file:packages/zo-ui-adapter-shadcn(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(typescript@5.9.3)
       '@zo-ui/adapter-tailwind':
-        specifier: workspace:*
-        version: link:../zo-ui-adapter-tailwind
+        specifier: file:../zo-ui-adapter-tailwind
+        version: file:packages/zo-ui-adapter-tailwind
       '@zo-ui/core':
-        specifier: workspace:*
+        specifier: file:../zo-ui-core
         version: link:../zo-ui-core
       chalk:
         specifier: ^5.0.0
@@ -87,7 +121,7 @@ importers:
   packages/zo-ui-core:
     dependencies:
       '@zo-ui/types':
-        specifier: workspace:*
+        specifier: file:../zo-ui-types
         version: link:../zo-ui-types
       jiti:
         specifier: ^2.6.1
@@ -456,8 +490,8 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@sveltejs/acorn-typescript@1.0.8':
-    resolution: {integrity: sha512-esgN+54+q0NjB0Y/4BomT9samII7jGwNy/2a3wNZbT2A2RpmXsXwUt24LvLhx6jUq2gVk4cWEvcRO6MFQbOfNA==}
+  '@sveltejs/acorn-typescript@1.0.9':
+    resolution: {integrity: sha512-lVJX6qEgs/4DOcRTpo56tmKzVPtoWAaVbL4hfO7t7NVwl9AAXzQR6cihesW1BmNMPl+bK6dreu2sOKBP2Q9CIA==}
     peerDependencies:
       acorn: ^8.9.0
 
@@ -474,8 +508,8 @@ packages:
       '@opentelemetry/api':
         optional: true
 
-  '@sveltejs/vite-plugin-svelte-inspector@5.0.1':
-    resolution: {integrity: sha512-ubWshlMk4bc8mkwWbg6vNvCeT7lGQojE3ijDh3QTR6Zr/R+GXxsGbyH4PExEPpiFmqPhYiVSVmHBjUcVc1JIrA==}
+  '@sveltejs/vite-plugin-svelte-inspector@5.0.2':
+    resolution: {integrity: sha512-TZzRTcEtZffICSAoZGkPSl6Etsj2torOVrx6Uw0KpXxrec9Gg6jFWQ60Q3+LmNGfZSxHRCZL7vXVZIWmuV50Ig==}
     engines: {node: ^20.19 || ^22.12 || >=24}
     peerDependencies:
       '@sveltejs/vite-plugin-svelte': ^6.0.0-next.0
@@ -554,12 +588,31 @@ packages:
   '@vitest/utils@1.6.1':
     resolution: {integrity: sha512-jOrrUvXM4Av9ZWiG1EajNto0u96kWAhJ1LmPmJhXXQx/32MecEKd10pOLYgS2BQx1TgkGhloPU1ArDW2vvaY6g==}
 
+  '@zo-ui/adapter-shadcn@file:packages/zo-ui-adapter-shadcn':
+    resolution: {directory: packages/zo-ui-adapter-shadcn, type: directory}
+
+  '@zo-ui/adapter-tailwind@file:packages/zo-ui-adapter-tailwind':
+    resolution: {directory: packages/zo-ui-adapter-tailwind, type: directory}
+
+  '@zo-ui/core@file:packages/zo-ui-core':
+    resolution: {directory: packages/zo-ui-core, type: directory}
+
+  '@zo-ui/types@file:packages/zo-ui-types':
+    resolution: {directory: packages/zo-ui-types, type: directory}
+    peerDependencies:
+      zod: ^3.0.0
+
   acorn-walk@8.3.4:
     resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
     engines: {node: '>=0.4.0'}
 
   acorn@8.15.0:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.16.0:
+    resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -644,6 +697,9 @@ packages:
   class-validator@0.14.3:
     resolution: {integrity: sha512-rXXekcjofVN1LTOSw+u4u9WXVEUvNBVjORW154q/IdmYWy1nMbOU9aNtZB0t8m+FJQ9q91jlr2f9CwwUFdFMRA==}
 
+  class-validator@0.14.4:
+    resolution: {integrity: sha512-AwNusCCam51q703dW82x95tOqQp6oC9HNUl724KxJJOfnKscI8dOloXFgyez7LbTTKWuRBA37FScqVbJEoq8Yw==}
+
   cli-cursor@3.1.0:
     resolution: {integrity: sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==}
     engines: {node: '>=8'}
@@ -715,6 +771,9 @@ packages:
   devalue@5.6.1:
     resolution: {integrity: sha512-jDwizj+IlEZBunHcOuuFVBnIMPAEHvTsJj0BcIp94xYguLRVBcXO853px/MyIJvbVzWdsGvrRweIUWJw8hBP7A==}
 
+  devalue@5.6.3:
+    resolution: {integrity: sha512-nc7XjUU/2Lb+SvEFVGcWLiKkzfw8+qHI7zn8WYXKkLMgfGSHbgCEaR6bJpev8Cm6Rmrb19Gfd/tZvGqx9is3wg==}
+
   diff-sequences@29.6.3:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -724,6 +783,9 @@ packages:
 
   effect@3.19.14:
     resolution: {integrity: sha512-3vwdq0zlvQOxXzXNKRIPKTqZNMyGCdaFUBfMPqpsyzZDre67kgC1EEHDV4EoQTovJ4w5fmJW756f86kkuz7WFA==}
+
+  effect@3.19.19:
+    resolution: {integrity: sha512-Yc8U/SVXo2dHnaP7zNBlAo83h/nzSJpi7vph6Hzyl4ulgMBIgPmz3UzOjb9sBgpFE00gC0iETR244sfXDNLHRg==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -736,8 +798,8 @@ packages:
   esm-env@1.2.2:
     resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
 
-  esrap@2.2.1:
-    resolution: {integrity: sha512-GiYWG34AN/4CUyaWAgunGt0Rxvr1PTMlGC0vvEov/uOQYWne2bpN03Um+k8jT+q3op33mKouP2zeJ6OlM+qeUg==}
+  esrap@2.2.3:
+    resolution: {integrity: sha512-8fOS+GIGCQZl/ZIlhl59htOlms6U8NvX6ZYgYHpRU/b6tVSh3uHkOHZikl3D4cMbYM0JlpBe+p/BkZEi8J9XIQ==}
 
   estree-walker@3.0.3:
     resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
@@ -854,6 +916,9 @@ packages:
   libphonenumber-js@1.12.33:
     resolution: {integrity: sha512-r9kw4OA6oDO4dPXkOrXTkArQAafIKAU71hChInV4FxZ69dxCfbwQGDPzqR5/vea94wU705/3AZroEbSoeVWrQw==}
 
+  libphonenumber-js@1.12.38:
+    resolution: {integrity: sha512-vwzxmasAy9hZigxtqTbFEwp8ZdZ975TiqVDwj5bKx5sR+zi5ucUQy9mbVTkKM9GzqdLdxux/hTw2nmN5J7POMA==}
+
   local-pkg@0.5.1:
     resolution: {integrity: sha512-9rrA30MRRP3gBD3HTGnC6cDFpaE1kVDWxWgqWJUN0RvDNAo+Nz/9GxB+nHOH0ifbVFy0hSA1V6vFDvnx54lTEQ==}
     engines: {node: '>=14'}
@@ -927,6 +992,9 @@ packages:
   npm-run-path@5.3.0:
     resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  obug@2.1.1:
+    resolution: {integrity: sha512-uTqF9MuPraAQ+IsnPf366RG4cP9RtUi7MLO1N3KEc+wb0a6yKpeL0lmk2IB1jY5KHPAlTc6T/JRdC/YqxHNwkQ==}
 
   onetime@5.1.2:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
@@ -1107,6 +1175,12 @@ packages:
       '@sveltejs/kit': 1.x || 2.x
       svelte: 3.x || 4.x || >=5.0.0-next.51
 
+  sveltekit-superforms@2.30.0:
+    resolution: {integrity: sha512-EzXD7sHbi7yBU/eNtzVm6P6axcrVM8BArkbiT96Vdx48s5m4KXte/tbbp3UULtEW8Nk9wt2hYkGeq7nDBwVceg==}
+    peerDependencies:
+      '@sveltejs/kit': 1.x || 2.x
+      svelte: 3.x || 4.x || >=5.0.0-next.51
+
   tiny-case@1.0.3:
     resolution: {integrity: sha512-Eet/eeMhkO6TX8mnUteS9zgPbUMQa4I6Kkp5ORiBD5476/m+PIRiumP5tmh5ioJpH7k51Kehawy2UDfsnxxY8Q==}
 
@@ -1159,6 +1233,9 @@ packages:
 
   typebox@1.0.71:
     resolution: {integrity: sha512-hdMrMqeQUm3Kxkie9dP9sJa2if7KKSnE/D3mogrYCfupYUDP2KLf8wAhMXvyR8oeiduSkXTJCSnugv8iS/Mqiw==}
+
+  typebox@1.1.5:
+    resolution: {integrity: sha512-TBdiM4mSppvWdmRDK5PoocxrMOqGIU9TxmS9zdHH+k8S/+2SIaNlPfMlx3f6hISxma14t2yX7SRySg7+TYYT9w==}
 
   typescript@5.9.3:
     resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
@@ -1222,10 +1299,10 @@ packages:
       terser:
         optional: true
 
-  vitefu@1.1.1:
-    resolution: {integrity: sha512-B/Fegf3i8zh0yFbpzZ21amWzHmuNlLlmJT6n7bu5e+pCHUKQIfXSYokrqOBGEMMe9UG2sostKQF9mml/vYaWJQ==}
+  vitefu@1.1.2:
+    resolution: {integrity: sha512-zpKATdUbzbsycPFBN71nS2uzBUQiVnFoOrr2rvqv34S1lcAgMKKkjWleLGeiJlZ8lwCXvtWaRn7R3ZC16SYRuw==}
     peerDependencies:
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0-beta.0
+      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-beta.0
     peerDependenciesMeta:
       vite:
         optional: true
@@ -1301,6 +1378,9 @@ packages:
 
   zod@4.3.4:
     resolution: {integrity: sha512-Zw/uYiiyF6pUT1qmKbZziChgNPRu+ZRneAsMUDU6IwmXdWt5JwcUfy2bvLOCUtz5UniaN/Zx5aFttZYbYc7O/A==}
+
+  zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
 
 snapshots:
 
@@ -1525,19 +1605,19 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@sveltejs/acorn-typescript@1.0.8(acorn@8.15.0)':
+  '@sveltejs/acorn-typescript@1.0.9(acorn@8.16.0)':
     dependencies:
-      acorn: 8.15.0
+      acorn: 8.16.0
 
   '@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27))':
     dependencies:
       '@standard-schema/spec': 1.1.0
-      '@sveltejs/acorn-typescript': 1.0.8(acorn@8.15.0)
+      '@sveltejs/acorn-typescript': 1.0.9(acorn@8.16.0)
       '@sveltejs/vite-plugin-svelte': 6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27))
       '@types/cookie': 0.6.0
-      acorn: 8.15.0
+      acorn: 8.16.0
       cookie: 0.6.0
-      devalue: 5.6.1
+      devalue: 5.6.3
       esm-env: 1.2.2
       kleur: 4.1.5
       magic-string: 0.30.21
@@ -1548,24 +1628,22 @@ snapshots:
       svelte: 5.46.1
       vite: 5.4.21(@types/node@20.19.27)
 
-  '@sveltejs/vite-plugin-svelte-inspector@5.0.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27))':
+  '@sveltejs/vite-plugin-svelte-inspector@5.0.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27))
-      debug: 4.4.3
+      obug: 2.1.1
       svelte: 5.46.1
       vite: 5.4.21(@types/node@20.19.27)
-    transitivePeerDependencies:
-      - supports-color
 
   '@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 5.0.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27))
+      '@sveltejs/vite-plugin-svelte-inspector': 5.0.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27))
       debug: 4.4.3
       deepmerge: 4.3.1
       magic-string: 0.30.21
       svelte: 5.46.1
       vite: 5.4.21(@types/node@20.19.27)
-      vitefu: 1.1.1(vite@5.4.21(@types/node@20.19.27))
+      vitefu: 1.1.2(vite@5.4.21(@types/node@20.19.27))
     transitivePeerDependencies:
       - supports-color
 
@@ -1600,6 +1678,15 @@ snapshots:
       '@typeschema/core': 0.14.0
     optionalDependencies:
       class-validator: 0.14.3
+    transitivePeerDependencies:
+      - '@types/json-schema'
+    optional: true
+
+  '@typeschema/class-validator@0.3.0(class-validator@0.14.4)':
+    dependencies:
+      '@typeschema/core': 0.14.0
+    optionalDependencies:
+      class-validator: 0.14.4
     transitivePeerDependencies:
       - '@types/json-schema'
     optional: true
@@ -1656,11 +1743,41 @@ snapshots:
       loupe: 2.3.7
       pretty-format: 29.7.0
 
+  '@zo-ui/adapter-shadcn@file:packages/zo-ui-adapter-shadcn(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(typescript@5.9.3)':
+    dependencies:
+      '@zo-ui/core': file:packages/zo-ui-core
+      '@zo-ui/types': file:packages/zo-ui-types(zod@3.25.76)
+      sveltekit-superforms: 2.30.0(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(typescript@5.9.3)
+      zod: 3.25.76
+    transitivePeerDependencies:
+      - '@sveltejs/kit'
+      - '@types/json-schema'
+      - svelte
+      - typescript
+
+  '@zo-ui/adapter-tailwind@file:packages/zo-ui-adapter-tailwind':
+    dependencies:
+      '@zo-ui/core': link:packages/zo-ui-core
+
+  '@zo-ui/core@file:packages/zo-ui-core':
+    dependencies:
+      '@zo-ui/types': file:packages/zo-ui-types(zod@3.25.76)
+      jiti: 2.6.1
+      ts-morph: 25.0.1
+      zod: 3.25.76
+      zod-to-json-schema: 3.25.1(zod@3.25.76)
+
+  '@zo-ui/types@file:packages/zo-ui-types(zod@3.25.76)':
+    dependencies:
+      zod: 3.25.76
+
   acorn-walk@8.3.4:
     dependencies:
       acorn: 8.15.0
 
   acorn@8.15.0: {}
+
+  acorn@8.16.0: {}
 
   ansi-escapes@4.3.2:
     dependencies:
@@ -1750,6 +1867,13 @@ snapshots:
       validator: 13.15.26
     optional: true
 
+  class-validator@0.14.4:
+    dependencies:
+      '@types/validator': 13.15.10
+      libphonenumber-js: 1.12.38
+      validator: 13.15.26
+    optional: true
+
   cli-cursor@3.1.0:
     dependencies:
       restore-cursor: 3.1.0
@@ -1801,12 +1925,20 @@ snapshots:
 
   devalue@5.6.1: {}
 
+  devalue@5.6.3: {}
+
   diff-sequences@29.6.3: {}
 
   dlv@1.1.3:
     optional: true
 
   effect@3.19.14:
+    dependencies:
+      '@standard-schema/spec': 1.1.0
+      fast-check: 3.23.2
+    optional: true
+
+  effect@3.19.19:
     dependencies:
       '@standard-schema/spec': 1.1.0
       fast-check: 3.23.2
@@ -1842,7 +1974,7 @@ snapshots:
 
   esm-env@1.2.2: {}
 
-  esrap@2.2.1:
+  esrap@2.2.3:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
@@ -1969,6 +2101,9 @@ snapshots:
   libphonenumber-js@1.12.33:
     optional: true
 
+  libphonenumber-js@1.12.38:
+    optional: true
+
   local-pkg@0.5.1:
     dependencies:
       mlly: 1.8.0
@@ -2031,6 +2166,8 @@ snapshots:
   npm-run-path@5.3.0:
     dependencies:
       path-key: 4.0.0
+
+  obug@2.1.1: {}
 
   onetime@5.1.2:
     dependencies:
@@ -2218,15 +2355,15 @@ snapshots:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.5
-      '@sveltejs/acorn-typescript': 1.0.8(acorn@8.15.0)
+      '@sveltejs/acorn-typescript': 1.0.9(acorn@8.16.0)
       '@types/estree': 1.0.8
-      acorn: 8.15.0
+      acorn: 8.16.0
       aria-query: 5.3.2
       axobject-query: 4.1.0
       clsx: 2.1.1
-      devalue: 5.6.1
+      devalue: 5.6.3
       esm-env: 1.2.2
-      esrap: 2.2.1
+      esrap: 2.2.3
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.21
@@ -2255,6 +2392,34 @@ snapshots:
       yup: 1.7.1
       zod: 4.3.4
       zod-v3-to-json-schema: 4.0.0(zod@4.3.4)
+    transitivePeerDependencies:
+      - '@types/json-schema'
+      - typescript
+
+  sveltekit-superforms@2.30.0(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(typescript@5.9.3):
+    dependencies:
+      '@sveltejs/kit': 2.49.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27)))(svelte@5.46.1)(vite@5.4.21(@types/node@20.19.27))
+      devalue: 5.6.3
+      memoize-weak: 1.0.2
+      svelte: 5.46.1
+      ts-deepmerge: 7.0.3
+    optionalDependencies:
+      '@exodus/schemasafe': 1.3.0
+      '@standard-schema/spec': 1.1.0
+      '@typeschema/class-validator': 0.3.0(class-validator@0.14.4)
+      '@valibot/to-json-schema': 1.5.0(valibot@1.2.0(typescript@5.9.3))
+      '@vinejs/vine': 3.0.1
+      arktype: 2.1.29
+      class-validator: 0.14.4
+      effect: 3.19.19
+      joi: 17.13.3
+      json-schema-to-ts: 3.1.1
+      superstruct: 2.0.2
+      typebox: 1.1.5
+      valibot: 1.2.0(typescript@5.9.3)
+      yup: 1.7.1
+      zod: 4.3.6
+      zod-v3-to-json-schema: 4.0.0(zod@4.3.6)
     transitivePeerDependencies:
       - '@types/json-schema'
       - typescript
@@ -2297,6 +2462,9 @@ snapshots:
     optional: true
 
   typebox@1.0.71:
+    optional: true
+
+  typebox@1.1.5:
     optional: true
 
   typescript@5.9.3: {}
@@ -2342,7 +2510,7 @@ snapshots:
       '@types/node': 20.19.27
       fsevents: 2.3.3
 
-  vitefu@1.1.1(vite@5.4.21(@types/node@20.19.27)):
+  vitefu@1.1.2(vite@5.4.21(@types/node@20.19.27)):
     optionalDependencies:
       vite: 5.4.21(@types/node@20.19.27)
 
@@ -2422,7 +2590,15 @@ snapshots:
       zod: 4.3.4
     optional: true
 
+  zod-v3-to-json-schema@4.0.0(zod@4.3.6):
+    dependencies:
+      zod: 4.3.6
+    optional: true
+
   zod@3.25.76: {}
 
   zod@4.3.4:
+    optional: true
+
+  zod@4.3.6:
     optional: true
